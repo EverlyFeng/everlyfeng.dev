@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Loading...</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Premium HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="premium website templates, premium html5, premium template, premium bootstrap, premium website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/my-style.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/nyc.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t js-fullheight">
+						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+							<div :style="{backgroundImage: 'url(' + PICADDRESS + ')'}" class="profile-thumb"></div>
+							<h1><span>{{Name}}</span></h1>
+							<h3><span>{{Title}}</span></h3>
+							<p>
+								<ul class="fh5co-social-icons">
+									<li v-for="el in contacts">
+										<a :href="el.address" v-if="el.method==='linkedin'" target="_blank"><i class="icon-linkedin" ></i></a>
+										<a :href="el.address" v-if="el.method==='twitter'" target="_blank"><i class="icon-twitter" ></i></a>
+<!--										<a :href="el.address" v-if="el.method==='discord'" target="_blank"><i class="icon-chat2" ></i></a>-->
+<!--										<a :href="el.address" v-if="el.method==='微博'" target="_blank"><i class="icon-sina-weibo" ></i></a>-->
+
+									</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="fh5co-about" class="animate-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>About&nbsp;Me</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<ul class="info">
+						<li><span class="first-block">Name:</span><span class="second-block">{{Name}}</span></li>
+						<li><span class="first-block">Tel:</span><span class="second-block">{{tel}}</span></li>
+						<li><span class="first-block">Email:</span><span class="second-block">{{email}}</span></li>
+						<li><span class="first-block">Location:</span><span class="second-block">{{location}}</span></li>
+						<li><span class="first-block">Website:</span><span class="second-block">{{web}}</span></li>
+					</ul>
+				</div>
+				<div class="col-md-8">
+					<h2>{{aboutmetitle}}</h2>
+					<p>{{aboutmecontent}}</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li v-for="el in contacts" style="margin-right:5px;border-radius:10px ">
+									<a :href="el.address" v-if="el.method==='linkedin'" target="_blank"><i class="icon-linkedin" ></i></a>
+									<a :href="el.address" v-if="el.method==='twitter'" target="_blank"><i class="icon-twitter" ></i></a>
+<!--									<a :href="el.location" v-if="el.method==='discord'" target="_blank"><i class="icon-chat2" ></i></a>-->
+<!--									<a :href="el.location" v-if="el.method==='git'" target="_blank"><i class="icon-sina-weibo" ></i></a>-->
+							</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-resume" class="fh5co-bg-color">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>My Journey</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0">
+					<ul class="timeline">
+												<li class="timeline-heading text-center animate-box">
+							<div><h3>Education</h3></div>
+						</li>
+						<li class=" animate-box"  v-for="(el,index) in education" :class="index%2===0?'timeline-unverted':'timeline-inverted'">
+							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">{{el.degree}}</h3>
+									<span class="company">{{el.collegename}}</span>
+									<span class="time">{{el.time}}</span>
+								</div>
+								<div class="timeline-body">
+									<p>
+										<ul>
+									<li>
+										{{el.activities}}
+									</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+						</li>
+						<br>
+						<li class="timeline-heading text-center animate-box">
+							<div><h3>experience</h3></div>
+						</li>
+						<li class="animate-box" v-for="(el,index) in experience" :class="index%2===0?'timeline-unverted':'timeline-inverted'">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">{{el.jobtitle}}</h3>
+									<span class="company">{{el.company}}</span>
+									<span class="time">{{el.time}}</span>
+								</div>
+								<div class="timeline-body">
+									<p>
+										<ul >
+											<li>{{el.description1}}</li> <br>
+											<li>{{el.description2}}</li> <br>
+											<li>{{el.description3}}</li> <br>
+										</ul>
+									</p>
+								</div>
+							</div>
+						</li>
+			    	</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-work" class="fh5co-bg-dark">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>My Projects</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-center col-padding animate-box" v-for="el in project">
+					<a :href="el.web" target="_blank" class="work" :style="'background-image: url('+el.pic+');'">
+						<div class="desc">
+							<h3>{{el.name}}</h3>
+							<span>{{el.des}}</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="fh5co-skills" class="animate-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>My Technical Skills</h2>
+				</div>
+			</div>
+			<div class="row row-pb-md">
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center" v-for="el in skills">
+					<div class="chart" :data-percent="el.percentage"><span><strong>{{el.name}}</strong>{{el.percentage}}%</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!--	<div id="fh5co-features" class="animate-box">-->
+<!--		<div class="container">-->
+<!--			<div class="services-padding">-->
+<!--				<div class="row">-->
+<!--					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">-->
+<!--						<h2>My Hobbies</h2>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="row">-->
+<!--					<div class="col-md-4 text-center" v-for="(el,index) in hobbies">-->
+<!--						<div class="feature-left" style="width:100%">-->
+<!--							<span class="icon">-->
+<!--								<i class="icon-bike"></i>-->
+<!--							</span>-->
+<!--							<div class="feature-copy">-->
+<!--								<h3>{{el.name}}</h3>-->
+<!--								<p>{{el.description}}</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Validate JS -->
+	<script src="js/jquery.validate.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Easy PieChart -->
+	<script src="js/jquery.easypiechart.min.js"></script>
+
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	<!-- Setting -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="config.js"></script>
+<!--	<script>-->
+<!--		const htmlEl = document.getElementsByTagName('html')[0];-->
+<!--		function toggle_theme(theme) {-->
+<!--                htmlEl.dataset.theme = theme;-->
+<!--            }-->
+
+<!--		function is_night() {-->
+<!--                var today = new Date();-->
+<!--                var hour = today.getHours();-->
+
+<!--                if (hour > 18 || hour < 7) {-->
+<!--                    return true;-->
+<!--                }-->
+<!--                return false-->
+<!--            }-->
+
+<!--		if (is_night()) {-->
+<!--                toggle_theme('dark');-->
+<!--		} else {-->
+<!--                toggle_theme('light');-->
+<!--		}-->
+<!--	</script>-->
+
+	</body>
+</html>
+
