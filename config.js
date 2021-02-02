@@ -19,13 +19,13 @@ var app = new Vue({
         method: 'twitter',
         address: 'https://twitter.com/EverlyFeng'
       },
+      {
+        method: 'github',
+        address: 'https://github.com/EverlyFeng'
+      },
       // {
       //   method: 'discord',
       //   address: 'https://discord.gg/gP8JuVPqRv'
-      // },
-      // {
-      //   method: 'instagram',
-      //   address: '234234'
       // }
     ],
     aboutmetitle: 'Welcome!',

@@ -58,8 +58,8 @@
 									<li v-for="el in contacts">
 										<a :href="el.address" v-if="el.method==='linkedin'" target="_blank"><i class="icon-linkedin" ></i></a>
 										<a :href="el.address" v-if="el.method==='twitter'" target="_blank"><i class="icon-twitter" ></i></a>
-<!--										<a :href="el.address" v-if="el.method==='discord'" target="_blank"><i class="icon-chat2" ></i></a>-->
-<!--										<a :href="el.address" v-if="el.method==='微博'" target="_blank"><i class="icon-sina-weibo" ></i></a>-->
+										<a :href="el.address" v-if="el.method==='github'" target="_blank"><i class="icon-github" ></i></a>
+<!--										<a :href="el.address" v-if="el.method==='discord'" target="_blank"><i class="icon-" ></i></a>-->
 
 									</li>
 								</ul>
@@ -96,8 +96,8 @@
 							<li v-for="el in contacts" style="margin-right:5px;border-radius:10px ">
 									<a :href="el.address" v-if="el.method==='linkedin'" target="_blank"><i class="icon-linkedin" ></i></a>
 									<a :href="el.address" v-if="el.method==='twitter'" target="_blank"><i class="icon-twitter" ></i></a>
-<!--									<a :href="el.location" v-if="el.method==='discord'" target="_blank"><i class="icon-chat2" ></i></a>-->
-<!--									<a :href="el.location" v-if="el.method==='git'" target="_blank"><i class="icon-sina-weibo" ></i></a>-->
+									<a :href="el.address" v-if="el.method==='github'" target="_blank"><i class="icon-github" ></i></a>
+<!--									<a :href="el.location" v-if="el.method==='giscord'" target="_blank"><i class="icon-" ></i></a>-->
 							</li>
 						</ul>
 					</p>
